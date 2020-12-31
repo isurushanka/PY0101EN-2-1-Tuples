@@ -1,0 +1,300 @@
+Now, let us create your first tuple with string, integer and float.
+# Create your first tuple
+tuple1 = ("disco",10,1.2 )
+tuple1
+('disco', 10, 1.2)
+The type of variable is a tuple.
+
+# Print the type of the tuple you created
+type(tuple1)
+tuple
+Indexing
+Each element of a tuple can be accessed via an index. The following table represents the relationship between the index and the items in the tuple. Each element can be obtained by the name of the tuple followed by a square bracket with the index number:
+
+
+We can print out each value in the tuple:
+
+1
+# Print the variable on each index
+
+print(tuple1[0])
+print(tuple1[1])
+print(tuple1[2])
+disco
+10
+1.2
+We can print out the type of each value in the tuple:
+# Print the type of value on each index
+
+print(type(tuple1[0]))
+
+print(type(tuple1[1]))
+5
+print(type(tuple1[2]))
+<class 'str'>
+<class 'int'>
+<class 'float'>
+We can also use negative indexing. We use the same table above with corresponding negative values:
+
+
+We can obtain the last element as follows (this time we will not use the print statement to display the values):
+
+
+# Use negative index to get the value of the last element
+
+tuple1[-1]
+1.2
+We can display the next two elements as follows:
+
+1
+# Use negative index to get the value of the second last element
+2
+​
+3
+tuple1[-2]
+10
+1
+# Use negative index to get the value of the third last element
+2
+​
+3
+tuple1[-3]
+'disco'
+Concatenate Tuples
+We can concatenate or combine tuples by using the + sign:
+
+1
+# Concatenate two tuples
+2
+​
+3
+tuple2 = tuple1 + ("hard rock", 10)
+4
+tuple2
+('disco', 10, 1.2, 'hard rock', 10)
+We can slice tuples obtaining multiple values as demonstrated by the figure below:
+
+
+Slicing
+We can slice tuples, obtaining new tuples with the corresponding elements:
+
+1
+# Slice from index 0 to index 2
+2
+​
+3
+tuple2[0:3]
+('disco', 10, 1.2)
+We can obtain the last two elements of the tuple:
+
+1
+# Slice from index 3 to index 4
+2
+​
+3
+tuple2[3:5]
+('hard rock', 10)
+We can obtain the length of a tuple using the length command:
+
+1
+# Get the length of tuple
+2
+​
+3
+len(tuple2)
+5
+This figure shows the number of elements:
+
+
+Sorting
+Consider the following tuple:
+
+1
+# A sample tuple
+2
+​
+3
+Ratings = (0, 9, 6, 5, 10, 8, 9, 6, 2)
+We can sort the values in a tuple and save it to a new tuple:
+
+1
+# Sort the tuple
+2
+​
+3
+RatingsSorted = sorted(Ratings)
+4
+RatingsSorted
+[0, 2, 5, 6, 6, 8, 9, 9, 10]
+Nested Tuple
+A tuple can contain another tuple as well as other more complex data types. This process is called 'nesting'. Consider the following tuple with several elements:
+
+1
+# Create a nest tuple
+2
+​
+3
+NestedT =(1, 2, ("pop", "rock") ,(3,4),("disco",(1,2)))
+Each element in the tuple including other tuples can be obtained via an index as shown in the figure:
+
+
+1
+# Print element on each index
+2
+​
+3
+print("Element 0 of Tuple: ", NestedT[0])
+4
+print("Element 1 of Tuple: ", NestedT[1])
+5
+print("Element 2 of Tuple: ", NestedT[2])
+6
+print("Element 3 of Tuple: ", NestedT[3])
+7
+print("Element 4 of Tuple: ", NestedT[4])
+Element 0 of Tuple:  1
+Element 1 of Tuple:  2
+Element 2 of Tuple:  ('pop', 'rock')
+Element 3 of Tuple:  (3, 4)
+Element 4 of Tuple:  ('disco', (1, 2))
+We can use the second index to access other tuples as demonstrated in the figure:
+
+
+We can access the nested tuples :
+
+1
+# Print element on each index, including nest indexes
+2
+​
+3
+print("Element 2, 0 of Tuple: ",   NestedT[2][0])
+4
+print("Element 2, 1 of Tuple: ",   NestedT[2][1])
+5
+print("Element 3, 0 of Tuple: ",   NestedT[3][0])
+6
+print("Element 3, 1 of Tuple: ",   NestedT[3][1])
+7
+print("Element 4, 0 of Tuple: ",   NestedT[4][0])
+8
+print("Element 4, 1 of Tuple: ",   NestedT[4][1])
+Element 2, 0 of Tuple:  pop
+Element 2, 1 of Tuple:  rock
+Element 3, 0 of Tuple:  3
+Element 3, 1 of Tuple:  4
+Element 4, 0 of Tuple:  disco
+Element 4, 1 of Tuple:  (1, 2)
+We can access strings in the second nested tuples using a third index:
+
+1
+# Print the first element in the second nested tuples
+2
+​
+3
+NestedT[2][1][0]
+'r'
+1
+# Print the second element in the second nested tuples
+2
+​
+3
+NestedT[2][1][1]
+'o'
+We can use a tree to visualise the process. Each new index corresponds to a deeper level in the tree:
+
+
+Similarly, we can access elements nested deeper in the tree with a fourth index:
+
+1
+# Print the first element in the second nested tuples
+2
+​
+3
+NestedT[4][1][0]
+1
+1
+# Print the second element in the second nested tuples
+2
+​
+3
+NestedT[4][1][1]
+2
+The following figure shows the relationship of the tree and the element NestedT[4][1][1]:
+
+1
+<img src="https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/PY0101EN/Chapter%202/Images/TuplesNestFour.gif" width="750" align="center">
+2
+​
+Quiz on Tuples
+Consider the following tuple:
+
+1
+# sample tuple
+2
+​
+3
+genres_tuple = ("pop", "rock", "soul", "hard rock", "soft rock", \
+4
+                "R&B", "progressive rock", "disco") 
+5
+genres_tuple
+('pop',
+ 'rock',
+ 'soul',
+ 'hard rock',
+ 'soft rock',
+ 'R&B',
+ 'progressive rock',
+ 'disco')
+Find the length of the tuple, genres_tuple:
+
+1
+# Write your code below and press Shift+Enter to execute
+2
+len(genres_tuple)
+8
+
+Click here for the solution
+Access the element, with respect to index 3:
+
+1
+# Write your code below and press Shift+Enter to ege
+2
+genres_tuple[3]
+'hard rock'
+Click here for the solution
+Use slicing to obtain indexes 3, 4 and 5:
+
+1
+# Write your code below and press Shift+Enter to execute
+2
+genres_tuple[3:6]
+('hard rock', 'soft rock', 'R&B')
+Click here for the solution
+Find the first two elements of the tuple genres_tuple:
+
+1
+# Write your code below and press Shift+Enter to execute
+2
+genres_tuple[0:2]
+('pop', 'rock')
+Click here for the solution
+Find the first index of "disco":
+
+1
+# Write your code below and press Shift+Enter to execute
+2
+genres_tuple.index("disco")
+7
+Click here for the solution
+Generate a sorted List from the Tuple C_tuple=(-5, 1, -3):
+
+1
+# Write your code below and press Shift+Enter to ex
+2
+C_tuple=(-5, 1, -3)
+3
+C_tuplesorted = sorted(C_tuple)
+4
+print (C_tuplesorted)
+[-5, -3, 1]
